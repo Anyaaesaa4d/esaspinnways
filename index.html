@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>ESA4D - Spin Hadiah</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <h1>SELAMAT DATANG DI <span>ESA4D</span></h1>
+    <p>PUTAR RODANYA & DAPATKAN HADIAH FANTASTIS!</p>
+    <a class="login-link" href="https://esadiks.com" target="_blank">MASUK ESA4D</a>
+    <div class="timer" id="timer"></div>
+  </div>
+
+  <div class="wheel-wrap">
+    <div class="pointer"></div>
+    <svg id="wheel" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="98" fill="#330000" stroke="#FFD700" stroke-width="4"/>
+      <g id="slices"></g>
+    </svg>
+  </div>
+
+  <div class="panel">
+    <h2>MASUKAN USER ID</h2>
+    <p>1 User ID hanya 1x spin</p>
+    <input id="uid" placeholder="Contoh: USER123">
+    <button id="spinBtn" onclick="spin()">SPIN SEKARANG!</button>
+    <div class="jackpot">Total Jackpot<br>IDR 888.905.601</div>
+  </div>
+
+  <div class="table">
+    <table id="log">
+      <tr><th>No</th><th>User</th><th>Hadiah</th></tr>
+    </table>
+  </div>
+
+</div>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+  <div class="popup-box">
+    <h2 id="winText"></h2>
+    <a id="waLink" target="_blank">KLAIM VIA WHATSAPP</a>
+    <br><button onclick="closePop()">Tutup</button>
+  </div>
+</div>
+
+<!-- AUDIO -->
+<audio id="spinSound" src="https://assets.mixkit.co/sfx/preview/mixkit-slot-machine-spin-1930.mp3"></audio>
+<audio id="winSound" src="https://assets.mixkit.co/sfx/preview/mixkit-winning-chimes-2015.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
